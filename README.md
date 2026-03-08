@@ -131,7 +131,7 @@ sudo make install
 ```
 <br>
 
-# Prewparing for boot (with systemd boot()
+# Prewparing for boot (with systemd boot)
 
 **Systemd boot** after running make install with automatiscally create an boot entry for your freshly compiled kernel. But to be sure that you will actually see tux we need to make some changes to the entry file. If you look at the enties folder **/boot/loader/entries** you will see the newly created file.
 
@@ -139,6 +139,8 @@ sudo make install
 ls /boot/loader/entries                  
  arch.conf   b473cb59c64b4556949412573488670b-6.19.6-custom-tux.conf
 ``
+
+
 
 ## Contributing
 
