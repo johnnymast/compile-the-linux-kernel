@@ -1,5 +1,5 @@
 # Compile the Linux kernel
-This is a personal experiment of mine to compile and install the linux kernel with the tux logo at boot. This project was done on arch linux on march 8th 2026. And yes before you ask, Yes it is neuro sama you see :) 
+This is a personal experiment of mine to compile and install the linux kernel with the tux logo at boot. This project was done on arch linux on march 8th 2026. And yes before you ask, Yes it is Neuro-sama in my fetch :) 
 
 > ℹ️ **Info**
 > Bleep
