@@ -118,3 +118,8 @@ of if you dont want to messure the compile time use
 ```bash
 make -j$(nproc)
 ```
+
+```
+sudo make modules_install
+sudo make install
+```
