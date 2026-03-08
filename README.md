@@ -87,5 +87,6 @@ In the build menu go go **General setup** &rarr;  **Local version** and enter th
 
 <br />
 <br />
+Now use Exit to navigate back to the root of the menu (you will know you reached it if you see General Setup on top). Next navigate to **Device Drivers** &rarr; **Graphics support** (you have to scroll down) to enable the **Bootup logo** option.
 
 
