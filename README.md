@@ -15,7 +15,8 @@
 
 
 This is a personal experiment of mine to compile and install the linux kernel with the tux logo at boot. This project was done on arch linux on march 8th 2026. This story is much a work in progress and will be properly edited and fixed at a later date.
-Below you can see the configuration of my machine as of before i started this project.
+Below you can see the configuration of my machine as of before i started this project. Oh an important thing to note is that i am using systemd boot as a bootloader. Once you are done building your kernel you could use research of your own if you dont use systemd boot your self.
+
 <br />
 <br />
 <br />
@@ -86,6 +87,34 @@ In the build menu go go **General setup** &rarr;  **Local version** and enter th
 <img width="1332" height="781" alt="20260308_14h39m35s_grim" src="https://github.com/user-attachments/assets/44695eeb-4bd0-4627-b299-5b7ff6be320d" />
 
 <br>Now use Exit to navigate back to the root of the menu (you will know you reached it if you see General Setup on top). Next navigate to **Device Drivers** &rarr; **Graphics support** to enable the **Bootup logo** option. You will see a page looking like this.
+<br><img width="1333" height="1093" alt="20260308_14h52m11s_grim" src="https://github.com/user-attachments/assets/d6c03918-6cb9-49d7-998d-fad9bd217a93" />
+<br>Now still in the **Graphics support** menu gO into the **Frame buffer Devices**   &rarr; **Support for frame buffer device drivers" and make sure the followuing options are enabled.
+
+- Vesa VGA graphics support
+- EFI-based Framebuffer support
+
+Next exit out to the main menu and dont forget to save the config on the way out. Before building the kernel validate your config by running the following command.
+
+```bash
+grep -E "LOGO|FB_SIMPLE|FB_EFI" .config
+
+CONFIG_SYSFB_SIMPLEFB=y
+CONFIG_FB_EFI=y
+CONFIG_LOGO=y
+CONFIG_LOGO_LINUX_MONO=y
+CONFIG_LOGO_LINUX_VGA16=y
+CONFIG_LOGO_LINUX_CLUT224=y
+```
+
+Next it is time to start building the kernel, be aware of the fact that depending on your system this might talke a while on my machine it will take. 
 
 
+```
+time make -j$(nproc)
+```
 
+of if you dont want to messure the compile time use
+
+```bash
+make -j$(nproc)
+```
