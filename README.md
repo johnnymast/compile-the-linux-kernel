@@ -23,7 +23,7 @@ Below you can see the configuration of my machine as of before i started this pr
 
 
 
-<img width="1444" height="1024" alt="20260308_13h33m57s_grim" src="https://github.com/user-attachments/assets/06ec15ef-31aa-4f7c-a8b9-0255c70ef44f" />
+<img alt="20260308_13h33m57s_grim" src="https://github.com/user-attachments/assets/06ec15ef-31aa-4f7c-a8b9-0255c70ef44f" />
 
 <br /><br />
 
@@ -84,10 +84,11 @@ nake menuconfig
 
 In the build menu go go **General setup** &rarr;  **Local version** and enter the custom name of the kernel.
 
-<img width="1332" height="781" alt="20260308_14h39m35s_grim" src="https://github.com/user-attachments/assets/44695eeb-4bd0-4627-b299-5b7ff6be320d" />
+<img alt="20260308_14h39m35s_grim" src="https://github.com/user-attachments/assets/44695eeb-4bd0-4627-b299-5b7ff6be320d" />
 
 <br>Now use Exit to navigate back to the root of the menu (you will know you reached it if you see General Setup on top). Next navigate to **Device Drivers** &rarr; **Graphics support** to enable the **Bootup logo** option. You will see a page looking like this.
-<br><img width="1333" height="1093" alt="20260308_14h52m11s_grim" src="https://github.com/user-attachments/assets/d6c03918-6cb9-49d7-998d-fad9bd217a93" />
+<br><img  alt="20260308_14h52m11s_grim" src="https://github.com/user-attachments/assets/d6c03918-6cb9-49d7-998d-fad9bd217a93" />
+
 <br>Now still in the **Graphics support** menu gO into the **Frame buffer Devices**   &rarr; **Support for frame buffer device drivers" and make sure the followuing options are enabled.
 
 - Vesa VGA graphics support
@@ -109,7 +110,7 @@ CONFIG_LOGO_LINUX_CLUT224=y
 Next it is time to start building the kernel, be aware of the fact that depending on your system this might talke a while on my machine it will take. 
 
 
-```
+```bash
 time make -j$(nproc)
 ```
 
@@ -118,12 +119,13 @@ time make -j$(nproc)
 > Compiling the Linux kernel on my machine took 20 minutes and 40 seconds. 
 > 
 
-
-of if you dont want to messure the compile time use
+If you dont want to messure the compile time use
 
 ```bash
 make -j$(nproc)
 ```
+
+Be aware compiling the kernel can take some time so take a coffee and watch some Nauro-sama videos voor like 20 minutes, your kernel will be waiting for you in about 20-30 minutes depending on your hardware.
 
 ```
 sudo make modules_install
@@ -140,12 +142,23 @@ ls /boot/loader/entries
  arch.conf   b473cb59c64b4556949412573488670b-6.19.6-custom-tux.conf
 ```
 
-This is the boot entry the i have of my custom kernel. There are a few things to not here one i haved added **xx** to make my pc faster (this will disable cpu exploit protections so we warned) and i made sure that i removed **quiet** and **loglevel=3** from my 
- 
-... TO BE CONTINUED ...
+This is the boot entry the i have of my custom kernel. There are a few things to not here one i haved added **mitigations=off** to make my pc faster (this will disable cpu exploit protections so we warned) and i made sure that i removed **quiet** and **loglevel=3** but i added **fbcon=nodefer** because without this option tux was not visible at boot.
 
 
-<img width="2560" height="1440" alt="Screenshot 2026-03-08 at 5 56 09 PM copy 2-2" src="https://github.com/user-attachments/assets/ea271698-558a-4fbe-9f6b-1fddac7f2bab" />
+```bash
+cat /boot/loader/entries/b473cb59c64b4556949412573488670b-6.19.6-custom-tux.conf
+# Boot Loader Specification type#1 entry
+# File created by /usr/lib/kernel/install.d/90-loaderentry.install (systemd 259.3-1-arch)
+title      Arch Linux
+version    6.19.6-custom-tux
+machine-id b473cb59c64b4556949412573488670b
+sort-key   arch
+options    root=PARTUUID=616f35a6-cf84-45cd-a918-657014af5b61 zswap.enabled=0 rw rootfstype=ext4 mitigations=off systemd.machine_id=b473cb59c64b4556949412573488670b fbcon=nodefer
+linux      /b473cb59c64b4556949412573488670b/6.19.6-custom-tux/linux
+initrd     /b473cb59c64b4556949412573488670b/6.19.6-custom-tux/initrd
+```
+<br>
+<img alt="Screenshot 2026-03-08 at 5 56 09 PM copy 2-2" src="https://github.com/user-attachments/assets/ea271698-558a-4fbe-9f6b-1fddac7f2bab" />
 
 
 
@@ -165,7 +178,7 @@ timeout 3
 
 ## Trouble shooting
 
-If you dont see Tux at boot make sure you have removed **quiet** and **loglevel=3** from your kernel cmd line (aka the kernel parameters). If this does not work make to remove kms from HOOKS in **/etc/mkinitcpio.conf** and run **sudo mkinitcpio -P** after.
+If you dont see Tux at boot make sure you have removed **quiet** and **loglevel=3** from your kernel cmd line (and you have added **fbcon=nodefer**). If this does not work make to remove kms from HOOKS in **/etc/mkinitcpio.conf** and run **sudo mkinitcpio -P** after.
 
 
 ## Contributing
