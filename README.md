@@ -145,17 +145,20 @@ This is the boot entry the i have of my custom kernel. There are a few things to
 ... TO BE CONTINUED ...
 
 
+<img width="2560" height="1440" alt="Screenshot 2026-03-08 at 5 56 09 PM copy 2-2" src="https://github.com/user-attachments/assets/ea271698-558a-4fbe-9f6b-1fddac7f2bab" />
+
+
+
+```bash
+uname -a
+Linux tux 6.19.6-custom-tux #1 SMP PREEMPT_DYNAMIC Sun Mar  8 15:36:41 CET 2026 x86_64 GNU/Linux
+```
+
 Optionally you can set the new kernel as the default option by adding the default like i did. 
 
 ```bash
 cat /boot/loader/loader.conf
-default b473cb59c64b4556949412573488670b-6.19.6-custom-tux 
-timeout 3
-#console-mode keep
-```
-
-``bash
-default b473cb59c64b4556949412573488670b-6.19.6-custom-tux 
+default b473cb59c64b4556949412573488670b-6.19.6-custom-tux.conf
 timeout 3
 #console-mode keep
 ```
