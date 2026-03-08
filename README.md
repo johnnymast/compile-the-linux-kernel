@@ -113,6 +113,12 @@ Next it is time to start building the kernel, be aware of the fact that dependin
 time make -j$(nproc)
 ```
 
+
+> ℹ️ **Info**
+> Compiling the Linux kernel on my machine took 20 minutes and 40 seconds. 
+> 
+
+
 of if you dont want to messure the compile time use
 
 ```bash
