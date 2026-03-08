@@ -1,9 +1,7 @@
-[![badge][(https://img.shields.io/badge/Powered--by-NeuroSama-brightgreen?style=for-the-badge)]([https://www.youtube.com/@Neurosama](https://www.youtube.com/@Neurosama))
-
-[![badge](xx)](https://google.com)
+[![badge](https://img.shields.io/badge/Powered--by-NeuroSama-brightgreen?style=for-the-badge)]([https://google.com](https://www.youtube.com/@Neurosama))
 
 # Compile the Linux kernel
-This is a personal experiment of mine to compile and install the linux kernel with the tux logo at boot. This project was done on arch linux on march 8th 2026. And yes before you ask, Yes it is Neuro-sama in my fetch :) 
+This is a personal experiment of mine to compile and install the linux kernel with the tux logo at boot. This project was done on arch linux on march 8th 2026.
 
 > ℹ️ **Info**
 > Bleep
