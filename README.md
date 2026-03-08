@@ -1,18 +1,34 @@
 [![Badge](https://img.shields.io/badge/Powered--by-NeuroSama-brightgreen?style=for-the-badge)](https://www.genome.gov/)
 
-# Compile the Linux kernel
-This is a personal experiment of mine to compile and install the linux kernel with the tux logo at boot. This project was done on arch linux on march 8th 2026.
+
+## Temporarly markdown markup (lol)
 
 > ℹ️ **Info**
 > Bleep
-> Bleep again
+> 
 
+
+# Compile the Linux kernel
+
+
+[<img src="https://www.archlinux.org/static/logos/archlinux-logo-dark-90dpi.ebdee92a15b3.png" align="right" width="250">](https://www.archlinux.org/)
+
+
+This is a personal experiment of mine to compile and install the linux kernel with the tux logo at boot. This project was done on arch linux on march 8th 2026. This story is much a work in progress and will be properly edited and fixed at a later date.
+Below you can see the configuration of my machine as of before i started this project.
+<br />
+<br />
+<br />
 
 
 
 <img width="1444" height="1024" alt="20260308_13h33m57s_grim" src="https://github.com/user-attachments/assets/06ec15ef-31aa-4f7c-a8b9-0255c70ef44f" />
 
-Alright before we start wee first need to install the dependencies we are going to need to compile the kernel successfully.
+<br /><br />
+
+
+
+Before we start wee first need to install some requirted dependencies so we can compile the kernel successfully.
 
 ```bash
 sudo pacman -Syu
@@ -31,10 +47,8 @@ cd linux-6.19.6
 And copy the config file from the current kernel into the new kernel's build path.
 
 ```bash
-🐧 ❯ cp /usr/lib/modules/$(uname -r)/build/.config .config
-
-~/kernel/linux-6.19.6 
-🐧 ❯ make oldconfig
+cp /usr/lib/modules/$(uname -r)/build/.config .config
+make oldconfig
 
   HOSTCC  scripts/basic/fixdep
   HOSTCC  scripts/kconfig/conf.o
@@ -52,7 +66,26 @@ And copy the config file from the current kernel into the new kernel's build pat
 #
 # configuration written to .config
 #
-
-~/kernel/linux-6.19.6 took 2s 
-🐧 ❯
 ```
+
+## Setting the kernel name and enable the tux logo
+
+```bash
+uname -a
+Linux tux 6.19.6-arch1-1 #1 SMP PREEMPT_DYNAMIC Wed, 04 Mar 2026 18:25:08 +0000 x86_64 GNU/Linux
+```
+
+If you look at the last part of my kernel you notice it is named arch1-1. I want to change my own kernel to say -custom-tux at the end so lets do this. 
+
+```bash
+nake menuconfig
+```
+
+In the build menu go go **General setup** &rarr;  **Local version** and enter the custom name of the kernel.
+
+<img width="1332" height="781" alt="20260308_14h39m35s_grim" src="https://github.com/user-attachments/assets/44695eeb-4bd0-4627-b299-5b7ff6be320d" />
+
+<br />
+<br />
+
+
