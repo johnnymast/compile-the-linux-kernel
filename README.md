@@ -145,6 +145,21 @@ This is the boot entry the i have of my custom kernel. There are a few things to
 ... TO BE CONTINUED ...
 
 
+Optionally you can set the new kernel as the default option by adding the default like i did. 
+
+```bash
+cat /boot/loader/loader.conf
+default b473cb59c64b4556949412573488670b-6.19.6-custom-tux 
+timeout 3
+#console-mode keep
+```
+
+``bash
+default b473cb59c64b4556949412573488670b-6.19.6-custom-tux 
+timeout 3
+#console-mode keep
+```
+
 ## Trouble shooting
 
 If you dont see Tux at boot make sure you have removed **quiet** and **loglevel=3** from your kernel cmd line (aka the kernel parameters). If this does not work make to remove kms from HOOKS in **/etc/mkinitcpio.conf** and run **sudo mkinitcpio -P** after.
