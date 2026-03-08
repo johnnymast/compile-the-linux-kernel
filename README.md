@@ -1,7 +1,7 @@
 [![Badge](https://img.shields.io/badge/Powered--by-NeuroSama-brightgreen?style=for-the-badge)](https://www.genome.gov/)
 
 
-# Compile the Linux kernel
+# Compile the Linux kernel with boot logo support
 
 
 [<img src="https://www.archlinux.org/static/logos/archlinux-logo-dark-90dpi.ebdee92a15b3.png" align="right" width="250">](https://www.archlinux.org/)
