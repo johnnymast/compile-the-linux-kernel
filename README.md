@@ -131,8 +131,15 @@ sudo make install
 ```
 <br>
 
-```bash
-sudo mkinitcpio -k 6.19.6-custom-tux -g /boot/initramfs-6.19.6-custom-tux.img
-```
+# Prewparing for boot (with systemd boot()
 
-<br>
+**Systemd boot** after running make install with automatiscally create an boot entry for your freshly compiled kernel. But to be sure that you will actually see tux we need to make some changes to the entry file. If you look at the enties folder **/boot/loader/entries** you will see the newly created file.
+
+```bash
+ls /boot/loader/entries                  
+ arch.conf   b473cb59c64b4556949412573488670b-6.19.6-custom-tux.conf
+``
+
+## Contributing
+
+Hi there! i would love if someone could add instructions on how to add the boot entries for other bootloaders then systemd boot (be cause systemd boot automates the process other bootloaders might need a more manual aproach).
