@@ -5,6 +5,9 @@ This is a personal experiment of mine to compile and install the linux kernel wi
 > Bleep
 > Bleep again
 
+
+
+
 <img width="1444" height="1024" alt="20260308_13h33m57s_grim" src="https://github.com/user-attachments/assets/06ec15ef-31aa-4f7c-a8b9-0255c70ef44f" />
 
 Alright before we start wee first need to install the dependencies we are going to need to compile the kernel successfully.
