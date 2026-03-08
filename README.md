@@ -1,13 +1,6 @@
 [![Badge](https://img.shields.io/badge/Powered--by-NeuroSama-brightgreen?style=for-the-badge)](https://www.genome.gov/)
 
 
-## Temporarly markdown markup (lol)
-
-> ℹ️ **Info**
-> Bleep
-> 
-
-
 # Compile the Linux kernel
 
 
