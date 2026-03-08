@@ -13,7 +13,7 @@ sudo pacman -S base-devel git ncurses flex bison openssl elfutils bc cpio
 
 ```bash
 mkdir -p ~/kernel && cd ~/kernel
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.xz
-tar xf linux-6.12.tar.xz
-cd linux-6.12
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.19.6.tar.xz
+tar xf linux-6.19.6.tar.xz
+cd linux-6.19.6
 ```
