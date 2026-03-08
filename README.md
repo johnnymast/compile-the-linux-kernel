@@ -1,5 +1,5 @@
 # compile-the-linux-kernel
-This is a personal experiment of mine to compile and install the linux kernel with the tux logo at boot.
+This is a personal experiment of mine to compile and install the linux kernel with the tux logo at boot. This project was done on cachyos on march 8th 2026.
 
 ## Dependencies
 
