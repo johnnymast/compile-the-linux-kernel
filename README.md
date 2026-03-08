@@ -131,15 +131,23 @@ sudo make install
 ```
 <br>
 
-# Prewparing for boot (with systemd boot)
+# Preparing for boot (with systemd boot)
 
 **Systemd boot** after running make install with automatiscally create an boot entry for your freshly compiled kernel. But to be sure that you will actually see tux we need to make some changes to the entry file. If you look at the enties folder **/boot/loader/entries** you will see the newly created file.
 
 ```bash
 ls /boot/loader/entries                  
  arch.conf   b473cb59c64b4556949412573488670b-6.19.6-custom-tux.conf
-``
+```
 
+This is the boot entry the i have of my custom kernel. There are a few things to not here one i haved added **xx** to make my pc faster (this will disable cpu exploit protections so we warned) and i made sure that i removed **quiet** and **loglevel=3** from my 
+ 
+... TO BE CONTINUED ...
+
+
+## Trouble shooting
+
+If you dont see Tux at boot make sure you have removed **quiet** and **loglevel=3** from your kernel cmd line (aka the kernel parameters). If this does not work make to remove kms from HOOKS in **/etc/mkinitcpio.conf** and run **sudo mkinitcpio -P** after.
 
 
 ## Contributing
