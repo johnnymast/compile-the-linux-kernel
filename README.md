@@ -123,8 +123,10 @@ make -j$(nproc)
 sudo make modules_install
 sudo make install
 ```
-
+<br>
 
 ```bash
 sudo mkinitcpio -k 6.19.6-custom-tux -g /boot/initramfs-6.19.6-custom-tux.img
 ```
+
+<br>
