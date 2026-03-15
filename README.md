@@ -29,15 +29,14 @@
 <br /><br />
 
 
-
-Before we start wee first need to install some requirted dependencies so we can compile the kernel successfully.
+Before we begin, we need to install the required dependencies to ensure the kernel can be compiled successfully.
 
 ```bash
 sudo pacman -Syu
 sudo pacman -S base-devel git ncurses flex bison openssl elfutils bc cpio
 ```
 
-With that done the next step will be to get the Linux source code and extract it somewhere. 
+Once the dependencies are installed, the next step is to download the Linux source code and extract it to a working directory.
 
 ```bash
 mkdir -p ~/kernel && cd ~/kernel
@@ -46,7 +45,7 @@ tar xf linux-6.19.6.tar.xz
 cd linux-6.19.6
 ```
 
-And copy the config file from the current kernel into the new kernel's build path.
+After extracting the source, copy the configuration file from your currently running kernel into the new kernel’s build directory. This ensures that your custom kernel starts with the same configuration as your existing one.
 
 ```bash
 cp /usr/lib/modules/$(uname -r)/build/.config .config
