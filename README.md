@@ -2,9 +2,7 @@
 [![Badge](https://img.shields.io/badge/Buy--me--a--coffee-orange?style=for-the-badge)](https://www.buymeacoffee.com/mastjohnny)
 
 
-<a href="https://www.buymeacoffee.com/mastjohnny">:coffee: Buy me a Coffee</a>
 # Compile the Linux kernel with boot logo support
-https://www.buymeacoffee.com/mastjohnny
 
 [<img src="assets/archlogo.png" align="right" width="250">](https://www.archlinux.org/)
 
