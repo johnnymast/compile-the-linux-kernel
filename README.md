@@ -11,11 +11,14 @@
 [<img src="https://www.archlinux.org/static/logos/archlinux-logo-dark-90dpi.ebdee92a15b3.png" align="right" width="250">](https://www.archlinux.org/)
 
 
-<p>This project is a personal experiment in compiling and installing a custom Linux kernel that displays the Tux logo during boot. The work was carried out on Arch Linux on March 8th, 2026.</p>
+This project is a personal experiment in compiling and installing a custom Linux kernel that displays the Tux logo during boot. The work was carried out on Arch Linux on March 8th, 2026.
+<br>
 
-<p>This write‑up is still a work in progress and will be revised and expanded over time.</p>
+This write‑up is still a work in progress and will be revised and expanded over time.
+<br>
 
-<p>Below you can find the system configuration as it appeared before starting the experiment.</p>
+Below you can find the system configuration as it appeared before starting the experiment.
+<br>
 
 **One important note:** I am using systemd‑boot as my bootloader. If you are using a different bootloader, you may need to adjust the installation steps based on your own research.
 <br />
