@@ -79,9 +79,11 @@ uname -a
 Linux tux 6.19.6-arch1-1 #1 SMP PREEMPT_DYNAMIC Wed, 04 Mar 2026 18:25:08 +0000 x86_64 GNU/Linux
 ```
 
-<p>If you look at the last part of the kernel version string, you can see that it ends with arch1‑1. For this experiment, I want my custom kernel to use a different local version suffix — specifically -custom-tux. This helps distinguish it from the stock Arch kernel once it is installed.</p>
+If you look at the last part of the kernel version string, you can see that it ends with arch1‑1. For this experiment, I want my custom kernel to use a different local version suffix — specifically -custom-tux. This helps distinguish it from the stock Arch kernel once it is installed.
+<br>
 
-<p>To modify the kernel name and enable the Tux boot logo, open the kernel configuration menu:</p>
+To modify the kernel name and enable the Tux boot logo, open the kernel configuration menu:
+<br>
 
 
 ```bash
@@ -106,8 +108,10 @@ In the build menu, navigate to **General setup** → **Local version** and enter
 - Vesa VGA graphics support
 - EFI-based Framebuffer support
 
-<p>These options ensure that the kernel can display the Tux logo during early boot on systems using EFI firmware.</p>
-<p>After enabling these settings, exit back to the main menu and make sure to save your configuration before leaving menuconfig.</p>
+These options ensure that the kernel can display the Tux logo during early boot on systems using EFI firmware.
+<br>
+After enabling these settings, exit back to the main menu and make sure to save your configuration before leaving menuconfig.
+<br>
 
 ```bash
 grep -E "LOGO|FB_SIMPLE|FB_EFI" .config
@@ -119,9 +123,10 @@ CONFIG_LOGO_LINUX_MONO=y
 CONFIG_LOGO_LINUX_VGA16=y
 CONFIG_LOGO_LINUX_CLUT224=y
 ```
-<p>If your output matches these entries, the logo and framebuffer support are correctly configured.</p>
+<br>If your output matches these entries, the logo and framebuffer support are correctly configured.<br>
 
-<p>With the configuration validated, it is time to start building the kernel. Depending on your hardware, this process may take a significant amount of time; on my system it takes quite a while.</p>
+With the configuration validated, it is time to start building the kernel. Depending on your hardware, this process may take a significant amount of time; on my system it takes quite a while.
+<br>
 
 To measure how long the kernel compilation takes, you can wrap the build command with ***time***:
 
@@ -142,7 +147,8 @@ make -j$(nproc)
 
 Compiling the kernel can take a while depending on your hardware. It’s a good moment to grab a coffee or watch something while the build completes. On most systems, expect anywhere between ***20–30*** minutes.
 
-<p>Once the build finishes, install the kernel modules and the kernel itself:</p>
+Once the build finishes, install the kernel modules and the kernel itself:
+<br>
 
 ```
 sudo make modules_install
@@ -171,7 +177,8 @@ These options suppress boot messages, which also suppresses the Tux logo.
 - I added fbcon=nodefer.
 Without this option, the framebuffer console initializes too late, causing the Tux logo not to appear during early boot.
 
-<p>These adjustments ensure that the framebuffer is active early enough and that the kernel does not hide the boot logo.</p>
+These adjustments ensure that the framebuffer is active early enough and that the kernel does not hide the boot logo.
+<br>
 
 ## Boot entry verification and setting the default kernel
 
