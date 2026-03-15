@@ -190,7 +190,7 @@ With the configuration validated and everything in place, you can now reboot int
 <br>
 <img alt="Screenshot 2026-03-08 at 5 56 09 PM copy 2-2" src="https://github.com/user-attachments/assets/ea271698-558a-4fbe-9f6b-1fddac7f2bab" />
 
-<br>
+<br><br>
 
 ```bash
 uname -a
