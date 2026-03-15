@@ -170,8 +170,11 @@ These options suppress boot messages, which also suppresses the Tux logo.
 - I added fbcon=nodefer.
 Without this option, the framebuffer console initializes too late, causing the Tux logo not to appear during early boot.
 
-These adjustments ensure that the framebuffer is active early enough and that the kernel does not hide the boot logo.
+<p>These adjustments ensure that the framebuffer is active early enough and that the kernel does not hide the boot logo.</p>
 
+## Boot entry verification and setting the default kernel
+
+You can inspect the boot entry that systemd‑boot generated for your custom kernel:
 
 ```bash
 cat /boot/loader/entries/b473cb59c64b4556949412573488670b-6.19.6-custom-tux.conf
@@ -206,9 +209,16 @@ timeout 3
 
 ## Trouble shooting
 
-If you dont see Tux at boot make sure you have removed **quiet** and **loglevel=3** from your kernel cmd line (and you have added **fbcon=nodefer**). If this does not work make to remove kms from HOOKS in **/etc/mkinitcpio.conf** and run **sudo mkinitcpio -P** after.
+If the Tux logo does not appear during boot, check the following:
 
+- Make sure **quiet** and **loglevel=3** are removed from your kernel command line.
+- Ensure **fbcon=nodefer** is present.
+- If it still doesn’t work, remove kms from the HOOKS line in **/etc/mkinitcpio.conf**, then rebuild your initramfs:
+```bash
+sudo mkinitcpio -P
+```
+This forces the framebuffer to initialize earlier, which is required for the boot logo to display.
 
 ## Contributing
 
-Hi there! i would love if someone could add instructions on how to add the boot entries for other bootloaders then systemd boot (be cause systemd boot automates the process other bootloaders might need a more manual aproach).
+Contributions are welcome! If you use a different bootloader, I would appreciate instructions or examples for adding custom kernel entries outside of systemd‑boot. Since systemd‑boot automates most of the process, other bootloaders may require more manual configuration.
