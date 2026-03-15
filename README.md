@@ -92,7 +92,7 @@ In the build menu, navigate to **General setup** → **Local version** and enter
 
 <br>This section allows you to enable the classic Tux logo that appears during early boot. The menu should look similar to the screenshot below.
 
-<br><img  alt="20260308_14h52m11s_grim" src="https://github.com/user-attachments/assets/d6c03918-6cb9-49d7-998d-fad9bd217a93" />
+<br><img  alt="20260308_14h52m11s_grim" src="assets/boot-logo.png" />
 
 
 <br>Still within the **Graphics support** menu, go to **Frame buffer** Devices → Support for frame buffer device drivers and make sure the following options are enabled:
