@@ -147,7 +147,7 @@ make -j$(nproc)
 sudo make modules_install
 sudo make install
 ```
-<p>These commands will place the modules under ***/usr/lib/modules/*** and install the kernel, System.map, and initramfs into ***/boot***.</p>
+These commands will place the modules under ***/usr/lib/modules/*** and install the kernel, System.map, and initramfs into ***/boot***.
 <br>
 
 # Preparing for boot (with systemd boot)
