@@ -120,9 +120,7 @@ CONFIG_LOGO_LINUX_CLUT224=y
 
 <p>With the configuration validated, it is time to start building the kernel. Depending on your hardware, this process may take a significant amount of time; on my system it takes quite a while.</p>
 
-??
 To measure how long the kernel compilation takes, you can wrap the build command with ***time***:
-??
 
 ```bash
 time make -j$(nproc)
