@@ -3,7 +3,7 @@
 # Compile the Linux kernel with boot logo support
 
 
-[<img src="https://www.archlinux.org/static/logos/archlinux-logo-dark-90dpi.ebdee92a15b3.png" align="right" width="250">](https://www.archlinux.org/)
+[<img src="assets/archlogo.png" align="right" width="250">](https://www.archlinux.org/)
 
 
 This project is a personal experiment in compiling and installing a custom Linux kernel that displays the Tux logo during boot. The work was carried out on Arch Linux on March 8th, 2026.
