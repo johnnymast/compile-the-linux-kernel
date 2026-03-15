@@ -20,7 +20,7 @@ Below you can find the system configuration as it appeared before starting the e
 <br />
 <br />
 
-<img alt="20260308_13h33m57s_grim" src="https://github.com/user-attachments/assets/06ec15ef-31aa-4f7c-a8b9-0255c70ef44f" />
+<img alt="20260308_13h33m57s_grim" src="assets/archlogo.png" />
 
 <br /><br />
 
