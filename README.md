@@ -150,16 +150,27 @@ sudo make install
 These commands will place the modules under ***/usr/lib/modules/*** and install the kernel, System.map, and initramfs into ***/boot***.
 <br>
 
-# Preparing for boot (with systemd boot)
+## Preparing the systemd‑boot entry for your custom kernel
 
-**Systemd boot** after running make install with automatiscally create an boot entry for your freshly compiled kernel. But to be sure that you will actually see tux we need to make some changes to the entry file. If you look at the enties folder **/boot/loader/entries** you will see the newly created file.
+After running make install, **systemd‑boot** automatically generates a new boot entry for the freshly compiled kernel. To ensure that the Tux logo is actually visible during boot, a few adjustments to this entry are required.
+<br>
+You can find the generated entry under **/boot/loader/entries**:
 
 ```bash
 ls /boot/loader/entries                  
  arch.conf   b473cb59c64b4556949412573488670b-6.19.6-custom-tux.conf
 ```
 
-This is the boot entry the i have of my custom kernel. There are a few things to not here one i haved added **mitigations=off** to make my pc faster (this will disable cpu exploit protections so we warned) and i made sure that i removed **quiet** and **loglevel=3** but i added **fbcon=nodefer** because without this option tux was not visible at boot.
+The second file is the entry created for the custom kernel. There are a few important details to note when editing this file:
+
+- I added mitigations=off to improve performance.
+This disables CPU vulnerability mitigations, which reduces security, so use it only if you understand the risks.
+- I removed quiet and loglevel=3.
+These options suppress boot messages, which also suppresses the Tux logo.
+- I added fbcon=nodefer.
+Without this option, the framebuffer console initializes too late, causing the Tux logo not to appear during early boot.
+
+These adjustments ensure that the framebuffer is active early enough and that the kernel does not hide the boot logo.
 
 
 ```bash
