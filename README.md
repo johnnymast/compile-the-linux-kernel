@@ -191,6 +191,7 @@ With the configuration validated and everything in place, you can now reboot int
 <img alt="Screenshot 2026-03-08 at 5 56 09 PM copy 2-2" src="https://github.com/user-attachments/assets/ea271698-558a-4fbe-9f6b-1fddac7f2bab" />
 
 <br><br>
+To check which kernel version you are currently running, you can use ***uname -a***. This command will also display the custom name you assigned to your kernel.
 
 ```bash
 uname -a
