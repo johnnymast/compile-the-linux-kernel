@@ -85,19 +85,26 @@ Linux tux 6.19.6-arch1-1 #1 SMP PREEMPT_DYNAMIC Wed, 04 Mar 2026 18:25:08 +0000 
 nake menuconfig
 ```
 
-In the build menu go go **General setup** &rarr;  **Local version** and enter the custom name of the kernel.
+
+In the build menu, navigate to **General setup** → **Local version** and enter the custom suffix you want to use for your kernel. This value will be appended to the kernel version string, making it easier to distinguish your custom build from the stock Arch kernel.
 
 <img alt="20260308_14h39m35s_grim" src="https://github.com/user-attachments/assets/44695eeb-4bd0-4627-b299-5b7ff6be320d" />
 
-<br>Now use Exit to navigate back to the root of the menu (you will know you reached it if you see General Setup on top). Next navigate to **Device Drivers** &rarr; **Graphics support** to enable the **Bootup logo** option. You will see a page looking like this.
+<br/>After setting the local version, use **Exit** until you return to the top‑level menu (you will know you are there when you see General setup listed at the top). From here, navigate to **Device Drivers** → **Graphics support** to enable the **Bootup logo** option.
+
+<br>This section allows you to enable the classic Tux logo that appears during early boot. The menu should look similar to the screenshot below.
+
 <br><img  alt="20260308_14h52m11s_grim" src="https://github.com/user-attachments/assets/d6c03918-6cb9-49d7-998d-fad9bd217a93" />
 
-<br>Now still in the **Graphics support** menu gO into the **Frame buffer Devices**   &rarr; **Support for frame buffer device drivers" and make sure the followuing options are enabled.
+
+<br>Still within the **Graphics support** menu, go to **Frame buffer** Devices → Support for frame buffer device drivers and make sure the following options are enabled:
+
 
 - Vesa VGA graphics support
 - EFI-based Framebuffer support
 
-Next exit out to the main menu and dont forget to save the config on the way out. Before building the kernel validate your config by running the following command.
+<p>These options ensure that the kernel can display the Tux logo during early boot on systems using EFI firmware.</p>
+<p>After enabling these settings, exit back to the main menu and make sure to save your configuration before leaving menuconfig.</p>
 
 ```bash
 grep -E "LOGO|FB_SIMPLE|FB_EFI" .config
@@ -109,9 +116,13 @@ CONFIG_LOGO_LINUX_MONO=y
 CONFIG_LOGO_LINUX_VGA16=y
 CONFIG_LOGO_LINUX_CLUT224=y
 ```
+<p>If your output matches these entries, the logo and framebuffer support are correctly configured.</p>
 
-Next it is time to start building the kernel, be aware of the fact that depending on your system this might talke a while on my machine it will take. 
+<p>With the configuration validated, it is time to start building the kernel. Depending on your hardware, this process may take a significant amount of time; on my system it takes quite a while.</p>
 
+??
+To measure how long the kernel compilation takes, you can wrap the build command with ***time***:
+??
 
 ```bash
 time make -j$(nproc)
@@ -119,10 +130,10 @@ time make -j$(nproc)
 
 
 > ℹ️ **Info**
-> Compiling the Linux kernel on my machine took 20 minutes and 40 seconds. 
-> 
+> On my system, compiling the Linux kernel took 20 minutes and 40 seconds.
 
-If you dont want to messure the compile time use
+
+If you do not want to measure the compile time, simply run:
 
 ```bash
 make -j$(nproc)
