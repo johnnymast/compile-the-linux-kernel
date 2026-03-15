@@ -86,7 +86,7 @@ nake menuconfig
 
 In the build menu, navigate to **General setup** → **Local version** and enter the custom suffix you want to use for your kernel. This value will be appended to the kernel version string, making it easier to distinguish your custom build from the stock Arch kernel.
 
-<img alt="20260308_14h39m35s_grim" src="https://github.com/user-attachments/assets/44695eeb-4bd0-4627-b299-5b7ff6be320d" />
+<img alt="20260308_14h39m35s_grim" src="assets/kernel-name.png" />
 
 <br/>After setting the local version, use **Exit** until you return to the top‑level menu (you will know you are there when you see General setup listed at the top). From here, navigate to **Device Drivers** → **Graphics support** to enable the **Bootup logo** option.
 
