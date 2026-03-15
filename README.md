@@ -178,7 +178,7 @@ You can inspect the boot entry that systemd‑boot generated for your custom ker
 cat /boot/loader/entries/b473cb59c64b4556949412573488670b-6.19.6-custom-tux.conf
 # Boot Loader Specification type#1 entry
 # File created by /usr/lib/kernel/install.d/90-loaderentry.install (systemd 259.3-1-arch)
-title      Arch Linux
+title      Custom Tux
 version    6.19.6-custom-tux
 machine-id b473cb59c64b4556949412573488670b
 sort-key   arch
@@ -186,6 +186,7 @@ options    root=PARTUUID=616f35a6-cf84-45cd-a918-657014af5b61 zswap.enabled=0 rw
 linux      /b473cb59c64b4556949412573488670b/6.19.6-custom-tux/linux
 initrd     /b473cb59c64b4556949412573488670b/6.19.6-custom-tux/initrd
 ```
+With the configuration validated and everything in place, you can now reboot into your custom kernel. On the systemd‑boot menu, select **“Custom Tux”** (or whatever name your entry uses). After choosing it, the system will boot using your newly compiled kernel, and you should be greeted by the Tux logo as shown in the screenshot.
 <br>
 <img alt="Screenshot 2026-03-08 at 5 56 09 PM copy 2-2" src="https://github.com/user-attachments/assets/ea271698-558a-4fbe-9f6b-1fddac7f2bab" />
 
