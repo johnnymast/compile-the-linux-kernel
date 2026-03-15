@@ -165,7 +165,7 @@ The second file is the entry created for the custom kernel. There are a few impo
 
 - I added mitigations=off to improve performance.
 This disables CPU vulnerability mitigations, which reduces security, so use it only if you understand the risks.
-- I removed quiet and loglevel=3.
+- I **removed** **quiet** and **loglevel=3**.
 These options suppress boot messages, which also suppresses the Tux logo.
 - I added fbcon=nodefer.
 Without this option, the framebuffer console initializes too late, causing the Tux logo not to appear during early boot.
