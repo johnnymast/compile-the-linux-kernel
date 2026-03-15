@@ -139,7 +139,9 @@ If you do not want to measure the compile time, simply run:
 make -j$(nproc)
 ```
 
-Be aware compiling the kernel can take some time so take a coffee and watch some Nauro-sama videos voor like 20 minutes, your kernel will be waiting for you in about 20-30 minutes depending on your hardware.
+<p>Compiling the kernel can take a while depending on your hardware. It’s a good moment to grab a coffee or watch something while the build completes. On most systems, expect anywhere between ***20–30*** minutes.</p>
+
+<p>Once the build finishes, install the kernel modules and the kernel itself:</p>
 
 ```
 sudo make modules_install
