@@ -20,7 +20,7 @@ Below you can find the system configuration as it appeared before starting the e
 <br />
 <br />
 
-<img alt="20260308_13h33m57s_grim" src="assets/fastfetch.png" />
+<img alt="My machine configuration showing in fastfetch." src="assets/fastfetch.png" />
 
 <br /><br />
 
@@ -86,13 +86,13 @@ nake menuconfig
 
 In the build menu, navigate to **General setup** → **Local version** and enter the custom suffix you want to use for your kernel. This value will be appended to the kernel version string, making it easier to distinguish your custom build from the stock Arch kernel.
 
-<img alt="20260308_14h39m35s_grim" src="assets/kernel-name.png" />
+<img alt="Menu option to change the kernel name" src="assets/kernel-name.png" />
 
 <br/>After setting the local version, use **Exit** until you return to the top‑level menu (you will know you are there when you see General setup listed at the top). From here, navigate to **Device Drivers** → **Graphics support** to enable the **Bootup logo** option.
 
 <br>This section allows you to enable the classic Tux logo that appears during early boot. The menu should look similar to the screenshot below.
 
-<br><img  alt="20260308_14h52m11s_grim" src="assets/boot-logo.png" />
+<br><img  alt="Bootlogo menu where you enable the bootlogo" src="assets/boot-logo.png" />
 
 
 <br>Still within the **Graphics support** menu, go to **Frame buffer** Devices → Support for frame buffer device drivers and make sure the following options are enabled:
@@ -191,7 +191,7 @@ initrd     /b473cb59c64b4556949412573488670b/6.19.6-custom-tux/initrd
 ```
 With the configuration validated and everything in place, you can now reboot into your custom kernel. On the systemd‑boot menu, select **“Custom Tux”** (or whatever name your entry uses). After choosing it, the system will boot using your newly compiled kernel, and you should be greeted by the Tux logo as shown in the screenshot.
 <br>
-<img alt="Screenshot 2026-03-08 at 5 56 09 PM copy 2-2" src="assets/booting-with-tux.png" />
+<img alt="Linux bootscreen with tux ontop." src="assets/booting-with-tux.png" />
 
 <br><br>
 To check which kernel version you are currently running, you can use ***uname -a***. This command will also display the custom name you assigned to your kernel.
