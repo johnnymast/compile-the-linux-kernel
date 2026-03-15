@@ -188,7 +188,7 @@ initrd     /b473cb59c64b4556949412573488670b/6.19.6-custom-tux/initrd
 <br>
 <img alt="Screenshot 2026-03-08 at 5 56 09 PM copy 2-2" src="https://github.com/user-attachments/assets/ea271698-558a-4fbe-9f6b-1fddac7f2bab" />
 
-
+<br>
 
 ```bash
 uname -a
