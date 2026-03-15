@@ -17,7 +17,7 @@
 
 <p>Below you can find the system configuration as it appeared before starting the experiment.</p>
 
-<p>***One important note:*** I am using systemd‑boot as my bootloader. If you are using a different bootloader, you may need to adjust the installation steps based on your own research.</p>
+**One important note:** I am using systemd‑boot as my bootloader. If you are using a different bootloader, you may need to adjust the installation steps based on your own research.
 <br />
 <br />
 <br />
