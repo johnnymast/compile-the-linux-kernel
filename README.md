@@ -76,7 +76,10 @@ uname -a
 Linux tux 6.19.6-arch1-1 #1 SMP PREEMPT_DYNAMIC Wed, 04 Mar 2026 18:25:08 +0000 x86_64 GNU/Linux
 ```
 
-If you look at the last part of my kernel you notice it is named arch1-1. I want to change my own kernel to say -custom-tux at the end so lets do this. 
+<p>If you look at the last part of the kernel version string, you can see that it ends with arch1‑1. For this experiment, I want my custom kernel to use a different local version suffix — specifically -custom-tux. This helps distinguish it from the stock Arch kernel once it is installed.</p>
+
+<p>To modify the kernel name and enable the Tux boot logo, open the kernel configuration menu:</p>
+
 
 ```bash
 nake menuconfig
