@@ -191,7 +191,7 @@ initrd     /b473cb59c64b4556949412573488670b/6.19.6-custom-tux/initrd
 ```
 With the configuration validated and everything in place, you can now reboot into your custom kernel. On the systemd‑boot menu, select **“Custom Tux”** (or whatever name your entry uses). After choosing it, the system will boot using your newly compiled kernel, and you should be greeted by the Tux logo as shown in the screenshot.
 <br>
-<img alt="Screenshot 2026-03-08 at 5 56 09 PM copy 2-2" src="https://github.com/user-attachments/assets/ea271698-558a-4fbe-9f6b-1fddac7f2bab" />
+<img alt="Screenshot 2026-03-08 at 5 56 09 PM copy 2-2" src="assets/booting-with-tux.png" />
 
 <br><br>
 To check which kernel version you are currently running, you can use ***uname -a***. This command will also display the custom name you assigned to your kernel.
