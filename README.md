@@ -137,7 +137,7 @@ If you do not want to measure the compile time, simply run:
 make -j$(nproc)
 ```
 
-<p>Compiling the kernel can take a while depending on your hardware. It’s a good moment to grab a coffee or watch something while the build completes. On most systems, expect anywhere between ***20–30*** minutes.</p>
+Compiling the kernel can take a while depending on your hardware. It’s a good moment to grab a coffee or watch something while the build completes. On most systems, expect anywhere between ***20–30*** minutes.
 
 <p>Once the build finishes, install the kernel modules and the kernel itself:</p>
 
