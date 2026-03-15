@@ -217,6 +217,7 @@ If the Tux logo does not appear during boot, check the following:
 ```bash
 sudo mkinitcpio -P
 ```
+<br>
 This forces the framebuffer to initialize earlier, which is required for the boot logo to display.
 
 ## Contributing
