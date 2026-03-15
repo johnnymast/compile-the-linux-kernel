@@ -1,10 +1,5 @@
 [![Badge](https://img.shields.io/badge/Powered--by-NeuroSama-brightgreen?style=for-the-badge)](https://www.genome.gov/)
 
-> ℹ️ **Warning**
-> I am still working on to make the document better to read but it should work.
-> 
-
-
 # Compile the Linux kernel with boot logo support
 
 
